@@ -1,7 +1,7 @@
 <div align="center">
 
-<!-- YAHAN APNE GITHUB LOGO KA LINK DAALEIN (Upar wala logo) -->
-<img src="https://raw.githubusercontent.com/techindro/Laila/main/assets/logo.png" alt="Laila Logo" width="300"/>
+<!-- Laila Logo URL top view (Upar wala logo) -->
+<img src="https://github.com/user-attachments/assets/560b6d36-7aef-4d72-bcac-1171fcb9e8c9" alt="Laila Logo" width="300"/>
 
 ### Parameter-Efficient Adaptation of Whisper-Small for Indian-Accented and Code-Switched Hindi-English Speech
 
