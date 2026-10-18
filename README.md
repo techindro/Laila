@@ -1,6 +1,7 @@
 <div align="center">
 
-# 🎙️ Laila
+<!-- YAHAN APNE GITHUB LOGO KA LINK DAALEIN (Upar wala logo) -->
+<img src="https://raw.githubusercontent.com/techindro/Laila/main/assets/logo.png" alt="Laila Logo" width="300"/>
 
 ### Parameter-Efficient Adaptation of Whisper-Small for Indian-Accented and Code-Switched Hindi-English Speech
 
@@ -20,7 +21,7 @@
 
 ## 🌐 Platform Overview
 
-![Laila — ASR for Indian Languages](assets/hero.png)
+![Laila — ASR for Indian Languages](https://raw.githubusercontent.com/techindro/Laila/main/assets/hero.png)
 
 > *"Whisper, but for India — parameter-efficient ASR for Indian-accented and code-switched speech"*
 
@@ -32,7 +33,7 @@ Laila provides high-quality speech recognition, model evaluation, and AI tools d
 
 Experience Laila in action. All demos run on Hugging Face Spaces — no installation required.
 
-![Laila Live Demos](assets/live-demos.png)
+![Laila Live Demos](https://raw.githubusercontent.com/techindro/Laila/main/assets/live-demos.png)
 
 | Demo | Description | Link |
 |------|-------------|------|
@@ -129,7 +130,7 @@ Laila is a **parameter-efficient adaptation** of Whisper-Small purpose-built for
 
 ## 🧠 AI Knowledge Hub
 
-![AI Knowledge Hub — Speech AI & Parameter-Efficient AI](assets/ai-knowledge-hub.png)
+![AI Knowledge Hub — Speech AI & Parameter-Efficient AI](https://raw.githubusercontent.com/techindro/Laila/main/assets/ai-knowledge-hub.png)
 
 Laila explores core pillars of modern speech AI and how LoRA applies each discipline to solve critical language challenges.
 
@@ -151,7 +152,7 @@ Laila explores core pillars of modern speech AI and how LoRA applies each discip
 
 ## 📂 Case Studies & Resources
 
-![Case Studies & Resources](assets/case-studies.png)
+![Case Studies & Resources](https://raw.githubusercontent.com/techindro/Laila/main/assets/case-studies.png)
 
 ### Highlighted Case Studies
 
@@ -163,7 +164,7 @@ Laila explores core pillars of modern speech AI and how LoRA applies each discip
 
 ### Learning Resources
 
-![Learn More About The Data Engine](assets/resources.png)
+![Learn More About The Data Engine](https://raw.githubusercontent.com/techindro/Laila/main/assets/resources.png)
 
 | Type | Title |
 |------|-------|
