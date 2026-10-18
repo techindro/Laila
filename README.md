@@ -2,28 +2,29 @@
 
 # 🎙️ Laila
 
-## Parameter-Efficient Speech Recognition for Indian Languages
+### Parameter-Efficient Adaptation of Whisper-Small for Indian-Accented and Code-Switched Hindi-English Speech
 
-**Adapting Whisper-Small with LoRA — 3.5M trainable params, 1 free T4 GPU**
-
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Made in India](https://img.shields.io/badge/Made_in-India-orange.svg)](https://www.makeinindia.com)
-[![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org)
-[![HF Hub](https://img.shields.io/badge/HuggingFace-techindro-yellow)](https://huggingface.co/techindro)
+[![GitHub](https://img.shields.io/badge/GitHub-techindro-black?logo=github)](https://github.com/techindro)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue?logo=python)](https://www.python.org/downloads/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red?logo=pytorch)](https://pytorch.org/)
+[![Hugging Face](https://img.shields.io/badge/🤗-Transformers-orange)](https://huggingface.co/docs/transformers)
+[![PEFT](https://img.shields.io/badge/PEFT-LoRA-purple)](https://github.com/huggingface/peft)
 [![NeurIPS](https://img.shields.io/badge/NeurIPS-2024-blueviolet)](https://neurips.cc)
+
+**3.5M trainable params · 1.5% of base model · Trains on 1 free T4 GPU**
 
 </div>
 
 ---
 
-## 🌐 Overview
+## 🌐 Platform Overview
 
 ![Laila — ASR for Indian Languages](assets/hero.png)
 
 > *"Whisper, but for India — parameter-efficient ASR for Indian-accented and code-switched speech"*
 
-Laila adapts **Whisper-Small** with **Low-Rank Adaptation (LoRA)** to improve speech recognition on **Indian-accented English**, **Hindi**, and **Hindi-English code-switched (Hinglish)** speech — all on a **single free-tier T4 GPU**.
+Laila provides high-quality speech recognition, model evaluation, and AI tools designed for Indian users, enterprises, and researchers working on next-generation voice applications.
 
 ---
 
@@ -126,35 +127,150 @@ Laila is a **parameter-efficient adaptation** of Whisper-Small purpose-built for
 
 ---
 
-## 🛰️ Space & Defense Use Cases
+## 🧠 AI Knowledge Hub
 
-Laila's architecture extends naturally to **space and defense** speech applications:
+![AI Knowledge Hub — Speech AI & Parameter-Efficient AI](assets/ai-knowledge-hub.png)
 
-### Breakthrough ASR for Space & Beyond
+Laila explores core pillars of modern speech AI and how LoRA applies each discipline to solve critical language challenges.
 
-Laila provides a parameter-efficient ASR base for:
-- Space agencies (ISRO and allied partners)
-- Defense teams and armed forces
-- Enterprises working on voice interfaces
+### Core AI Disciplines
 
-### Generative AI Data Engine
+**Parameter-Efficient Fine-Tuning** — *Train less. Do more.*
+> LoRA writes the update to a weight matrix as the product of two low-rank matrices and trains only these. This lowers memory use and the size of the stored update. Laila leverages LoRA to adapt Whisper-Small with just 1.5% of trainable parameters.
+- 3.5M trainable params vs. 244M base
+- Single free-tier T4 GPU
+- Adapter file of a few MB
 
-Laila's LoRA adapters power **speech data pipelines** for advanced LLMs through:
+**Code-Switched Speech** — *Mixed language. Unified model.*
+> Code-switched speech mixes languages within a sentence — e.g., "kal meeting ke baad report bhej dena." Laila handles Hindi grammar with English nouns using separate test sets and a fixed transcript convention.
+- Separate Hindi, English, and code-switched test sets
+- Devanagari + Latin script convention
+- Noise-robust training
 
-| Capability | Description |
-|------------|-------------|
-| **Transcription** | Convert speech to text for prompt-response pairs |
-| **Code-Switching** | Handle Hindi-English mixed utterances |
-| **Noise Robustness** | Perform in monsoon, traffic, and night conditions |
-| **Multi-Language** | 22 Indian language adapters |
-| **Evaluation** | Benchmark WER/CER across languages |
+---
 
-The full pipeline: `Audio → Preprocess → LoRA Adapter → Transcription → Downstream NLP`
+## 📂 Case Studies & Resources
 
-### Laila Data Engine
+![Case Studies & Resources](assets/case-studies.png)
 
-![Laila Data Engine — Collect, Curate, Annotate](assets/data-engine.png)
+### Highlighted Case Studies
 
-> *Collect, curate, and annotate speech. Train adapters and evaluate. Repeat.*
+| Case Study | Category | Description |
+|------------|----------|-------------|
+| **Hindi ASR with LoRA** | ASR | Adapting Whisper-Small for Hindi speech on a single free T4 GPU |
+| **Hinglish Code-Switching** | Code-Switching | Building a transcription pipeline for Hindi-English mixed speech |
+| **Noise-Robust ASR** | Robustness | Training with background noise for real-world conditions |
 
-The Data Engine follows a continuous loop:
+### Learning Resources
+
+![Learn More About The Data Engine](assets/resources.png)
+
+| Type | Title |
+|------|-------|
+| Paper | Laila: Parameter-Efficient Adaptation of Whisper-Small |
+| Guide | Guide to LoRA Fine-Tuning |
+| Guide | Guide: Whisper Architecture |
+| Guide | Guide: WER & CER Evaluation |
+
+---
+
+## 📊 Benchmark Results
+
+### Word Error Rate (WER, %)
+
+| Model | Hindi | Indian English | Code-Switched | Trainable Params |
+|-------|-------|----------------|---------------|------------------|
+| Whisper-Small (zero-shot) | TBD | TBD | TBD | 0 |
+| Whisper-Small (full fine-tune) | TBD | TBD | TBD | 244M |
+| **Laila (LoRA, r=32)** | **TBD** | **TBD** | **TBD** | **3.5M** |
+
+### Character Error Rate (CER, %)
+
+| Model | Hindi | Indian English | Code-Switched |
+|-------|-------|----------------|---------------|
+| Whisper-Small (zero-shot) | TBD | TBD | TBD |
+| Whisper-Small (full fine-tune) | TBD | TBD | TBD |
+| **Laila (LoRA, r=32)** | **TBD** | **TBD** | **TBD** |
+
+### Ablation: LoRA Rank
+
+| Rank | Trainable Params | WER (%) |
+|------|------------------|---------|
+| 8 | TBD | TBD |
+| 16 | TBD | TBD |
+| **32** | **3.5M** | **TBD** |
+| 64 | TBD | TBD |
+
+### Ablation: Adapted Modules & Noise Augmentation
+
+| Adapted Modules | Noise | Hindi | English | Code-Switched |
+|-----------------|-------|-------|---------|---------------|
+| `q_proj`, `v_proj` | Off | TBD | TBD | TBD |
+| `q_proj`, `v_proj` | On | TBD | TBD | TBD |
+| `q_proj`, `k_proj`, `v_proj`, `out_proj` | On | TBD | TBD | TBD |
+| Decoder only | On | TBD | TBD | TBD |
+
+---
+
+## 🎙️ Indian Language Support (22 Adapters Planned)
+
+Laila plans to support all 22 scheduled languages of India:
+
+| Category | Languages |
+|----------|-----------|
+| **Indo-Aryan** | Hindi (हिन्दी), Bengali (বাংলা), Marathi (मराठी), Gujarati (ગુજરાતી), Odia (ଓଡ଼ିଆ), Punjabi (ਪੰਜਾਬੀ), Assamese (অসমীয়া), Urdu (اردو), Konkani (कोंकणी), Nepali (नेपाली), Maithili (मैथिली), Dogri (डोगरी), Sindhi (سنڌي) |
+| **Dravidian** | Tamil (தமிழ்), Telugu (తెలుగు), Kannada (ಕನ್ನಡ), Malayalam (മലയാളം) |
+| **Other** | Sanskrit (संस्कृतम्), Manipuri (মণিপুরী), Bodo (बड़ो), Santali (ᱥᱟᱱᱛᱟᱲᱤ), Kashmiri (کٲشُر) |
+| **Code-Switching** | Hinglish, Tanglish, Benglish, Tinglish, Kanglish, Manglish, Punglish, Marathi-English |
+
+---
+
+## 📁 Dataset v1.0 Statistics
+
+| Split | Modality | Samples | Annotated Labels |
+|-------|----------|---------|------------------|
+| Train | Hindi (Common Voice + AI4Bharat) | TBD | TBD |
+| Val | Hindi | TBD | TBD |
+| Train | Indian-Accented English | TBD | TBD |
+| Val | Indian-Accented English | TBD | TBD |
+| Train | Code-Switched Hindi-English | TBD | TBD |
+| Val | Code-Switched Hindi-English | TBD | TBD |
+| **Total** | **All** | **TBD** | **TBD** |
+
+---
+
+## 🏗️ Technology Stack
+
+| Layer | Technologies |
+|-------|--------------|
+| Base Model | Whisper-Small (244M parameters) |
+| Adaptation | LoRA (PEFT), rank r=32, α=64, dropout=0.05 |
+| Deep Learning | PyTorch 2.0+, HuggingFace Transformers |
+| Audio Processing | torchaudio, librosa, soundfile |
+| Evaluation | jiwer (WER/CER), HuggingFace Evaluate |
+| Training | HuggingFace Trainer, FP16, gradient checkpointing |
+| Inference | PEFT + Transformers, serverless worker architecture |
+| Infrastructure | 1× free-tier T4 GPU (16GB) |
+
+---
+
+## 🔮 What's Next?
+
+- Support for all 22 Indian languages
+- Real-time speech data processing
+- API for companies to use
+- Expansion to other code-switched pairs
+- Deeper integration with AI4Bharat and Bhashini
+- Expansion of noise-robust ASR for defense applications
+
+---
+
+## 📜 License
+
+MIT — Free to use, modify, and distribute.
+
+---
+
+## 🤝 Contributing
+
+PRs welcome! Let's build speech AI for Bharat 🇮🇳
