@@ -10,7 +10,7 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red?logo=pytorch)](https://pytorch.org/)
 [![Hugging Face](https://img.shields.io/badge/🤗-Transformers-orange)](https://huggingface.co/docs/transformers)
 [![PEFT](https://img.shields.io/badge/PEFT-LoRA-purple)](https://github.com/huggingface/peft)
-[![NeurIPS](https://img.shields.io/badge/NeurIPS-2024-blueviolet)](https://neurips.cc)
+[![NeurIPS](https://img.shields.io/badge/NeurIPS-2026-blueviolet)](https://neurips.cc)
 
 **3.5M trainable params · 1.5% of base model · Trains on 1 free T4 GPU**
 
