@@ -7,6 +7,7 @@
 
 [![GitHub](https://img.shields.io/badge/GitHub-techindro-black?logo=github)](https://github.com/techindro)
 [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-techindro%2FLaila-yellow?logo=huggingface)](https://huggingface.co/techindro/Laila)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24358453.svg)](https://doi.org/10.5281/zenodo.24358453)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue?logo=python)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red?logo=pytorch)](https://pytorch.org/)
@@ -331,14 +332,18 @@ python -m src.export_ggml --adapter_path adapters/hinglish --output_dir exports/
 
 ---
 
-## 📚 Citation
+## 📚 Citation & Paper
+
+- **Zenodo DOI:** [https://doi.org/10.5281/zenodo.24358453](https://doi.org/10.5281/zenodo.24358453)
+- **PDF Preprint:** [paper/Laila_NeurIPS_Paper.pdf](paper/Laila_NeurIPS_Paper.pdf)
 
 ```bibtex
 @article{patel2026laila,
   title={Laila: Parameter-Efficient Adaptation of Whisper-Small for Indian-Accented and Code-Switched Hindi-English Speech},
   author={Patel, Shubham},
   year={2026},
-  url={https://huggingface.co/techindro/Laila}
+  doi={10.5281/zenodo.24358453},
+  url={https://doi.org/10.5281/zenodo.24358453}
 }
 ```
 
