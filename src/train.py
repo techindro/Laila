@@ -122,6 +122,7 @@ def train_laila(
     max_samples_per_source: Optional[int] = 1500,
     push_to_hub: bool = False,
     hf_token: Optional[str] = None,
+    full_finetune: bool = False,
 ) -> Path:
     config.ensure_directories()
     token = hf_token or config.hf_token
@@ -140,7 +141,15 @@ def train_laila(
     model.generation_config.task = config.task
     model.generation_config.forced_decoder_ids = None
 
-    peft_model = apply_laila_lora(model, config)
+    if full_finetune:
+        for param in model.parameters():
+            param.requires_grad = True
+        if config.gradient_checkpointing:
+            model.gradient_checkpointing_enable()
+            model.config.use_cache = False
+        trained_model: Any = model
+    else:
+        trained_model = apply_laila_lora(model, config)
 
     raw_train, raw_eval = load_laila_datasets(
         config,
@@ -174,7 +183,7 @@ def train_laila(
 
     data_collator = DataCollatorSpeechSeq2Seq(
         processor=processor,
-        decoder_start_token_id=peft_model.config.decoder_start_token_id,
+        decoder_start_token_id=trained_model.config.decoder_start_token_id,
     )
 
     use_fp16 = config.fp16 and device.startswith("cuda")
@@ -211,7 +220,7 @@ def train_laila(
 
     trainer = Seq2SeqTrainer(
         args=training_args,
-        model=peft_model,
+        model=trained_model,
         train_dataset=train_dataset,
         eval_dataset=eval_dataset,
         data_collator=data_collator,
@@ -223,16 +232,20 @@ def train_laila(
     resume_checkpoint = find_latest_checkpoint(config.output_dir)
     trainer.train(resume_from_checkpoint=resume_checkpoint)
 
-    adapter_save_dir = Path(config.adapter_registry.get(adapter_name, Path(config.adapters_dir) / adapter_name))
-    adapter_save_dir.mkdir(parents=True, exist_ok=True)
-    peft_model.save_pretrained(str(adapter_save_dir))
-    processor.save_pretrained(str(adapter_save_dir))
+    save_target = (
+        Path(config.output_dir) / "full_finetune"
+        if full_finetune
+        else Path(config.adapter_registry.get(adapter_name, Path(config.adapters_dir) / adapter_name))
+    )
+    save_target.mkdir(parents=True, exist_ok=True)
+    trained_model.save_pretrained(str(save_target))
+    processor.save_pretrained(str(save_target))
 
     if push_to_hub:
-        peft_model.push_to_hub(config.hub_model_id, token=token)
+        trained_model.push_to_hub(config.hub_model_id, token=token)
         processor.push_to_hub(config.hub_model_id, token=token)
 
-    return adapter_save_dir
+    return save_target
 
 
 def parse_args() -> argparse.Namespace:
@@ -240,6 +253,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--adapter_name", type=str, default="hinglish")
     parser.add_argument("--max_steps", type=int, default=4000)
     parser.add_argument("--max_samples", type=int, default=1500)
+    parser.add_argument("--full_finetune", action="store_true")
     parser.add_argument("--push_to_hub", action="store_true")
     parser.add_argument("--hf_token", type=str, default=None)
     return parser.parse_args()
@@ -254,5 +268,6 @@ if __name__ == "__main__":
         max_samples_per_source=args.max_samples,
         push_to_hub=args.push_to_hub,
         hf_token=args.hf_token,
+        full_finetune=args.full_finetune,
     )
     print(f"Saved trained adapter to: {saved_path}")

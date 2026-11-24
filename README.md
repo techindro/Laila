@@ -58,17 +58,19 @@ Laila provides high-quality speech recognition, model evaluation, and AI tools d
 
 ## 🏗️ Architecture Overview
 
-```mermaid
-flowchart LR
-    A["16 kHz Mono Audio"] --> B["Silero VAD (Speech Chunking)"]
-    B --> C["80-Channel Log-Mel Spectrogram"]
-    C --> D["Frozen Base Model (ai4bharat/indicwhisper-hi, 244M)"]
-    D <--> E["Hot-Swappable LoRA (~3.5M, ~14 MB)"]
-    E --> F["hinglish / bhojpuri / indian_english"]
-    D --> G["Raw Transcript"]
-    G --> H["Script Toggle (Devanagari <-> Roman)"]
-    H --> I["Normalized Output"]
-```
+### 1. Layered System Architecture
+
+<div align="center">
+  <img src="assets/diagram-2.svg" alt="Laila Layered System Architecture" width="680"/>
+  <p><em>Layered architecture of Laila: Input Layer, Preprocessing &amp; Silero VAD, Frozen IndicWhisper + Multi-Adapter LoRA Core, and Output/Export Layer.</em></p>
+</div>
+
+### 2. End-to-End Training & Inference Flowchart
+
+<div align="center">
+  <img src="assets/diagram-1.svg" alt="Laila End-to-End Flowchart" width="100%"/>
+  <p><em>End-to-end data, LoRA adaptation, evaluation, and deployment flowchart.</em></p>
+</div>
 
 ---
 
@@ -314,7 +316,13 @@ result = asr.transcribe("sample.wav", adapter="hinglish", target_script="roman")
 print(result["text"])
 ```
 
-### 5. Export 4-Bit GGML (`q4_0`) for Android
+### 5. Paper Ablations, Noise Robustness & Error Analysis
+
+```bash
+python -m src.ablations --output_json outputs/ablation_audit.json
+```
+
+### 6. Export 4-Bit GGML (`q4_0`) for Android
 
 ```bash
 python -m src.export_ggml --adapter_path adapters/hinglish --output_dir exports/ggml

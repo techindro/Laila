@@ -1,0 +1,123 @@
+<svg class="light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1628.67 903.05" width="1628.67" height="903.05" id="mc05f07__root" data-diagram-type="flowchart">
+  <style data-mercat-style="universal">.mercat text{font-family:'Google Sans',Roboto,Arial,sans-serif;fill:var(--m-text);dominant-baseline:central}.mercat .m-node .m-shape{fill:var(--m-node-fill);stroke:var(--m-node-stroke);stroke-width:1.5px}.mercat .m-edge .m-path{fill:none;stroke:var(--m-line);stroke-width:1.5px}.mercat .m-edge-label .m-pill-bg,.mercat .m-edge-label .m-shape{fill:var(--m-pill-bg);stroke:var(--m-pill-border);stroke-width:1px}.mercat .m-edge-label .m-label{fill:var(--m-text-sec)}.mercat .m-group .m-shape{fill:var(--m-group-fill);stroke:var(--m-group-stroke);stroke-width:1px}.mercat .m-group .m-frame{fill:none;stroke:var(--m-group-stroke);stroke-width:1px}.mercat .m-group .m-header{fill:var(--m-group-hdr)}.mercat .m-group .m-label{fill:var(--m-group-text)}.mercat .t-label{font-size:13px;font-weight:500}.mercat .t-group{font-size:12px;font-weight:600}.mercat .t-edge{font-size:11px;font-weight:400}</style>
+  <style data-mercat-style="theme-light">#mc05f07__root{--m-text:#1f1f1f;--m-text-sec:#797979;--m-line:#545454;--m-node-fill:#f8f9fa;--m-node-stroke:#747775;--m-group-fill:#f8f9fa;--m-group-stroke:#747775;--m-group-hdr:#f4f4f4;--m-group-text:#1f1f1f;--m-pill-bg:#fbfbfb;--m-pill-border:#d7d7d7}</style>
+  <style data-mercat-style="theme-dark">#mc05f07__root.dark{--m-text:#e3e3e3;--m-text-sec:#959595;--m-line:#bfbfbf;--m-node-fill:#2d2e30;--m-node-stroke:#8e918f;--m-group-fill:#2d2e30;--m-group-stroke:#8e918f;--m-group-hdr:#292929;--m-group-text:#e3e3e3;--m-pill-bg:#232323;--m-pill-border:#424242}</style>
+  <style data-mercat-style="type">#mc05f07__root .m-node .flowchart-divider,#mc05f07__root .m-group .flowchart-divider{fill:none;stroke:var(--m-node-stroke);stroke-width:1px}#mc05f07__root .m-group&gt;.m-shape{stroke:none}#mc05f07__root .m-group&gt;.m-header{fill:var(--m-group-hdr);stroke:none}#mc05f07__root .m-label.flowchart-subgraph-title{fill:var(--m-text-sec);font-size:12px;font-weight:600}</style>
+  <g class="mercat mercat-flowchart" transform="translate(29.29, -43.45)">
+    <defs>
+      <marker id="mc05f07__mk-arrow" refX="9.45" refY="3.4" markerWidth="10.8" markerHeight="6.8" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+        <path d="M 0 0 L 10.8 3.4 L 0 6.8 Z" class="m-marker" fill="var(--m-line)" stroke="none"/>
+      </marker>
+    </defs>
+    <g class="m-node m-group" id="mc05f07__group__Core" data-role="container">
+      <rect x="922.88" y="58.45" width="661.51" height="585.45" rx="6" ry="6" class="m-shape"/>
+      <path d="M 922.88 64.45 Q 922.88 58.45, 928.88 58.45 L 1578.39 58.45 Q 1584.39 58.45, 1584.39 64.45 L 1584.39 86.45 L 922.88 86.45 Z" class="m-header"/>
+      <line x1="922.88" y1="86.45" x2="1584.39" y2="86.45" class="flowchart-divider"/>
+      <rect x="922.88" y="58.45" width="661.51" height="585.45" rx="6" ry="6" class="m-frame"/>
+      <text x="934.88" y="72.45" class="m-label flowchart-subgraph-title t-group" text-anchor="start">Laila Core Engine (1× Free 16GB T4 GPU)</text>
+    </g>
+    <g class="m-node m-edge" id="mc05f07__edge__A__B__0" data-role="connector">
+      <path d="M 736 151.8 L 736 210.45" class="m-path" marker-end="url(#mc05f07__mk-arrow)"/>
+    </g>
+    <g class="m-node m-edge" id="mc05f07__edge__B__C__0" data-role="connector">
+      <path d="M 736 265.6 L 736 324.25" class="m-path" marker-end="url(#mc05f07__mk-arrow)"/>
+    </g>
+    <g class="m-node m-edge" id="mc05f07__edge__E1__E__0" data-role="connector">
+      <path d="M 1031.59 143.35 L 1031.59 181.8 Q 1031.59 187.8, 1037.59 187.8 L 1154.73 187.8 Q 1160.73 187.8, 1160.73 193.8 L 1160.73 382.5 Q 1160.73 388.5, 1166.73 388.5 L 1219.67 388.5 Q 1225.67 388.5, 1225.67 394.5 L 1225.67 582.55 Q 1225.67 588.55, 1231.67 588.55 L 1246.18 588.55" class="m-path" marker-end="url(#mc05f07__mk-arrow)"/>
+    </g>
+    <g class="m-node m-edge" id="mc05f07__edge__E2__E__0" data-role="connector">
+      <path d="M 1210.73 143.35 L 1210.73 181.8 Q 1210.73 187.8, 1216.73 187.8 L 1327.46 187.8 Q 1333.46 187.8, 1333.46 193.8 L 1333.46 551.85" class="m-path" marker-end="url(#mc05f07__mk-arrow)"/>
+    </g>
+    <g class="m-node m-edge" id="mc05f07__edge__E3__E__0" data-role="connector">
+      <path d="M 1410.27 143.35 L 1410.27 551.85" class="m-path" marker-end="url(#mc05f07__mk-arrow)"/>
+    </g>
+    <g class="m-node m-edge" id="mc05f07__edge__D__E__0" data-role="connector">
+      <path d="M 1084.07 494.55 L 1084.07 523.2 Q 1084.07 529.2, 1090.07 529.2 L 1315.5 529.2 Q 1321.5 529.2, 1321.5 535.2 L 1321.5 551.85" class="m-path" marker-start="url(#mc05f07__mk-arrow)" marker-end="url(#mc05f07__mk-arrow)"/>
+    </g>
+    <g class="m-node m-edge" id="mc05f07__edge__C__D__0" data-role="connector">
+      <path d="M 736 379.4 L 736 409.4 Q 736 415.4, 742 415.4 L 1045.78 415.4 Q 1051.78 415.4, 1051.78 421.4 L 1051.78 438.05" class="m-path" marker-end="url(#mc05f07__mk-arrow)"/>
+    </g>
+    <g class="m-node m-edge" id="mc05f07__edge__D__F__0" data-role="connector">
+      <path d="M 1019.48 493.2 L 1019.48 523.2 Q 1019.48 529.2, 1013.48 529.2 L 561.78 529.2 Q 555.78 529.2, 555.78 535.2 L 555.78 560.3" class="m-path" marker-end="url(#mc05f07__mk-arrow)"/>
+    </g>
+    <g class="m-node m-edge" id="mc05f07__edge__F__G__0" data-role="connector">
+      <path d="M 528.22 615.45 L 528.22 653.9 Q 528.22 659.9, 522.22 659.9 L 291.93 659.9 Q 285.93 659.9, 285.93 665.9 L 285.93 702.55" class="m-path" marker-end="url(#mc05f07__mk-arrow)"/>
+    </g>
+    <g class="m-node m-edge" id="mc05f07__edge__F__H__0" data-role="connector">
+      <path d="M 583.34 615.45 L 583.34 653.9 Q 583.34 659.9, 589.34 659.9 L 758.02 659.9 Q 764.02 659.9, 764.02 665.9 L 764.02 702.55" class="m-path" marker-end="url(#mc05f07__mk-arrow)"/>
+    </g>
+    <g class="m-node m-edge" id="mc05f07__edge__G__I__0" data-role="connector">
+      <path d="M 247.14 757.7 L 247.14 787.7 Q 247.14 793.7, 241.14 793.7 L 124.61 793.7 Q 118.61 793.7, 118.61 799.7 L 118.61 884.8" class="m-path" marker-end="url(#mc05f07__mk-arrow)"/>
+    </g>
+    <g class="m-node m-edge" id="mc05f07__edge__G__J__0" data-role="connector">
+      <path d="M 324.72 757.7 L 324.72 884.8" class="m-path" marker-end="url(#mc05f07__mk-arrow)"/>
+    </g>
+    <g class="m-node m-edge" id="mc05f07__edge__H__K__0" data-role="connector">
+      <path d="M 764.02 757.7 L 764.02 876.35" class="m-path" marker-end="url(#mc05f07__mk-arrow)"/>
+    </g>
+    <g class="m-node m-node--rect" id="mc05f07__node__A" data-role="vertex">
+      <rect x="592.68" y="98" width="286.63" height="53.8" class="m-shape"/>
+      <text x="736" y="124.9" class="m-label t-label" text-anchor="middle"><tspan x="736" dy="-8.45px">Raw Indian Speech Input</tspan><tspan x="736" dy="16.9px">Hindi • Hinglish • Indian English • Regional</tspan></text>
+    </g>
+    <g class="m-node m-node--rect" id="mc05f07__node__E1" data-role="vertex">
+      <rect x="962.88" y="106.45" width="137.43" height="36.9" class="m-shape"/>
+      <text x="1031.59" y="124.9" class="m-label t-label" text-anchor="middle">adapters/hinglish</text>
+    </g>
+    <g class="m-node m-node--rect" id="mc05f07__node__E2" data-role="vertex">
+      <rect x="1140.31" y="106.45" width="140.85" height="36.9" class="m-shape"/>
+      <text x="1210.73" y="124.9" class="m-label t-label" text-anchor="middle">adapters/bhojpuri</text>
+    </g>
+    <g class="m-node m-node--rect" id="mc05f07__node__E3" data-role="vertex">
+      <rect x="1321.16" y="106.45" width="178.23" height="36.9" class="m-shape"/>
+      <text x="1410.27" y="124.9" class="m-label t-label" text-anchor="middle">adapters/indian_english</text>
+    </g>
+    <g class="m-node m-node--rect" id="mc05f07__node__B" data-role="vertex">
+      <rect x="586.34" y="211.8" width="299.32" height="53.8" class="m-shape"/>
+      <text x="736" y="238.7" class="m-label t-label" text-anchor="middle"><tspan x="736" dy="-8.45px">Upgrade 1: streaming_vad.py</tspan><tspan x="736" dy="16.9px">Silero VAD Real-Time Noise &amp; Silence Filter</tspan></text>
+    </g>
+    <g class="m-node m-node--rect" id="mc05f07__node__C" data-role="vertex">
+      <rect x="569.12" y="325.6" width="333.76" height="53.8" class="m-shape"/>
+      <text x="736" y="352.5" class="m-label t-label" text-anchor="middle"><tspan x="736" dy="-8.45px">Audio Preprocessing</tspan><tspan x="736" dy="16.9px">16 kHz Mono • 80-Channel Log-Mel Spectrogram</tspan></text>
+    </g>
+    <g class="m-node m-node--rect" id="mc05f07__node__D" data-role="vertex">
+      <rect x="942.88" y="439.4" width="217.8" height="53.8" class="m-shape"/>
+      <text x="1051.78" y="466.3" class="m-label t-label" text-anchor="middle"><tspan x="1051.78" dy="-8.45px">Frozen Base Model</tspan><tspan x="1051.78" dy="16.9px">Whisper-Small • 244M Params</tspan></text>
+    </g>
+    <g class="m-node m-node--rect" id="mc05f07__node__F" data-role="vertex">
+      <rect x="461.1" y="561.65" width="189.37" height="53.8" class="m-shape"/>
+      <text x="555.78" y="588.55" class="m-label t-label" text-anchor="middle"><tspan x="555.78" dy="-8.45px">Unified Inference Pipeline</tspan><tspan x="555.78" dy="16.9px">src/inference.py</tspan></text>
+    </g>
+    <g class="m-node m-node--rect" id="mc05f07__node__E" data-role="vertex">
+      <rect x="1247.53" y="553.2" width="271.85" height="70.7" class="m-shape"/>
+      <text x="1383.46" y="588.55" class="m-label t-label" text-anchor="middle"><tspan x="1383.46" dy="-16.9px">Upgrade 3: multi_adapter.py</tspan><tspan x="1383.46" dy="16.9px">Hot-Swappable ~14MB LoRA Adapters</tspan><tspan x="1383.46" dy="16.9px">r=32, α=64 • q_proj &amp; v_proj</tspan></text>
+    </g>
+    <g class="m-node m-node--rect" id="mc05f07__node__G" data-role="vertex">
+      <rect x="157.56" y="703.9" width="256.75" height="53.8" class="m-shape"/>
+      <text x="285.93" y="730.8" class="m-label t-label" text-anchor="middle"><tspan x="285.93" dy="-8.45px">Upgrade 2: script_toggle.py</tspan><tspan x="285.93" dy="16.9px">Indic-Transliteration Post-Processor</tspan></text>
+    </g>
+    <g class="m-node m-node--rect" id="mc05f07__node__H" data-role="vertex">
+      <rect x="645.36" y="703.9" width="237.32" height="53.8" class="m-shape"/>
+      <text x="764.02" y="730.8" class="m-label t-label" text-anchor="middle"><tspan x="764.02" dy="-8.45px">Edge Export: export_ggml.py</tspan><tspan x="764.02" dy="16.9px">Merge &amp; 4-Bit Quantization Q4_0</tspan></text>
+    </g>
+    <g class="m-node m-node--rect" id="mc05f07__node__I" data-role="vertex">
+      <rect x="-14.29" y="886.15" width="265.79" height="36.9" class="m-shape"/>
+      <text x="118.61" y="904.6" class="m-label t-label" text-anchor="middle">कल मीटिंग के बाद रिपोर्ट भेज देना</text>
+    </g>
+    <g class="m-node m-node--rect" id="mc05f07__node__J" data-role="vertex">
+      <rect x="299.45" y="886.15" width="259.92" height="36.9" class="m-shape"/>
+      <text x="429.41" y="904.6" class="m-label t-label" text-anchor="middle">kal meeting ke baad report bhej dena</text>
+    </g>
+    <g class="m-node m-node--rect" id="mc05f07__node__K" data-role="vertex">
+      <rect x="660.44" y="877.7" width="207.16" height="53.8" class="m-shape"/>
+      <text x="764.02" y="904.6" class="m-label t-label" text-anchor="middle"><tspan x="764.02" dy="-8.45px">Offline Android Build ~75MB</tspan><tspan x="764.02" dy="16.9px">Runs on 2GB RAM Devices</tspan></text>
+    </g>
+    <g class="m-edge-label">
+      <rect x="83.75" y="828.78" width="69.72" height="22.3" rx="11.15" ry="11.15" class="m-pill-bg"/>
+      <text x="118.61" y="839.93" class="m-label t-edge" text-anchor="middle">Devanagari</text>
+    </g>
+    <g class="m-edge-label">
+      <rect x="278.67" y="810.78" width="92.1" height="22.3" rx="11.15" ry="11.15" class="m-pill-bg"/>
+      <text x="324.72" y="821.93" class="m-label t-edge" text-anchor="middle">Roman Hinglish</text>
+    </g>
+  </g>
+</svg>

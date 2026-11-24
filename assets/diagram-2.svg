@@ -1,0 +1,73 @@
+<svg class="light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 701.5 778" width="701.5" height="778" id="m76a496__root" data-diagram-type="ascii">
+  <style data-mercat-style="universal">.mercat text{font-family:'Google Sans',Roboto,Arial,sans-serif;fill:var(--m-text);dominant-baseline:central}.mercat .m-node .m-shape{fill:var(--m-node-fill);stroke:var(--m-node-stroke);stroke-width:1.5px}.mercat .m-edge .m-path{fill:none;stroke:var(--m-line);stroke-width:1.5px}.mercat .m-group .m-shape{fill:var(--m-group-fill);stroke:var(--m-group-stroke);stroke-width:1px}.mercat .m-group .m-label{fill:var(--m-group-text)}.mercat .t-heading{font-size:14px;font-weight:600}</style>
+  <style data-mercat-style="theme-light">#m76a496__root{--m-text:#1f1f1f;--m-line:#545454;--m-node-fill:#f8f9fa;--m-node-stroke:#747775;--m-group-fill:#f8f9fa;--m-group-stroke:#747775;--m-group-text:#1f1f1f}</style>
+  <style data-mercat-style="theme-dark">#m76a496__root.dark{--m-text:#e3e3e3;--m-line:#bfbfbf;--m-node-fill:#2d2e30;--m-node-stroke:#8e918f;--m-group-fill:#2d2e30;--m-group-stroke:#8e918f;--m-group-text:#e3e3e3}</style>
+  <style data-mercat-style="type">#m76a496__root .outer-box{fill:var(--m-text);stroke:var(--m-node-stroke);stroke-width:1.75px;fill-opacity:0.06}#m76a496__root .header-text{fill:var(--m-text);font-size:14px;font-weight:600;white-space:pre}#m76a496__root .arrow-line,#m76a496__root .bus-line{fill:none;stroke:var(--m-line);stroke-width:1.5px;stroke-linecap:round;stroke-linejoin:round}</style>
+  <style data-mercat-style="diagram">#m76a496__root text{font-family:Google Sans Mono, Roboto Mono, monospace}</style>
+  <g class="mercat mercat-ascii">
+    <defs>
+      <marker id="m76a496__mk-arrow" refX="9.45" refY="3.4" markerWidth="10.8" markerHeight="6.8" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+        <path d="M 0 0 L 10.8 3.4 L 0 6.8 Z" class="m-marker" fill="var(--m-line)" stroke="none"/>
+      </marker>
+    </defs>
+    <g class="m-node shape outer cluster" id="m76a496__node__n0" data-role="step">
+      <rect x="15" y="15" width="671.5" height="110" class="m-shape outer-box"/>
+      <text x="346.5" y="59" class="m-label t-heading header-text" text-anchor="middle">1. INPUT LAYER</text>
+      <text x="346.5" y="81" class="m-label t-heading header-text" text-anchor="middle">Raw Indian Audio (Hindi / Hinglish / Indian English / Bhojpuri)</text>
+    </g>
+    <g class="m-node shape outer cluster" id="m76a496__node__n1" data-role="step">
+      <rect x="15" y="169" width="671.5" height="110" class="m-shape outer-box"/>
+      <text x="346.5" y="213" class="m-label t-heading header-text" text-anchor="middle">2. STREAMING &amp; VAD LAYER (src/streaming_vad.py)</text>
+      <text x="346.5" y="235" class="m-label t-heading header-text" text-anchor="middle">Silero VAD -&gt; Strips Silence &amp; Fan/Street Noise -&gt; 16 kHz Log-Mel</text>
+    </g>
+    <g class="m-group shape outer cluster" id="m76a496__group__g2" data-role="group">
+      <rect x="15" y="323" width="671.5" height="198" class="m-shape outer-box"/>
+      <text x="346.5" y="356" class="m-label t-heading header-text" text-anchor="middle">3. CORE MODEL &amp; HOT-SWAPPING ENGINE (src/multi_adapter.py)</text>
+    </g>
+    <g class="m-node shape outer cluster" id="m76a496__node__n3" data-role="step">
+      <rect x="40.5" y="389" width="314.5" height="110" class="m-shape outer-box"/>
+      <text x="193.5" y="422" class="m-label t-heading header-text" text-anchor="middle">Frozen Whisper-Small (244M)</text>
+      <text x="193.5" y="444" class="m-label t-heading header-text" text-anchor="middle">• 12 Encoder + 12 Decoder Layers</text>
+      <text x="193.5" y="466" class="m-label t-heading header-text" text-anchor="middle">• Only 1.5% (3.5M) Trainable</text>
+    </g>
+    <g class="m-node shape outer cluster" id="m76a496__node__n4" data-role="step">
+      <rect x="380.5" y="389" width="280.5" height="110" class="m-shape outer-box"/>
+      <text x="516.5" y="422" class="m-label t-heading header-text" text-anchor="middle">Hot-Swappable LoRA (~14MB)</text>
+      <text x="516.5" y="444" class="m-label t-heading header-text" text-anchor="middle">• r=32, α=64 (q_proj, v_proj)</text>
+      <text x="516.5" y="466" class="m-label t-heading header-text" text-anchor="middle">• [Hinglish | Bhojpuri | EN]</text>
+    </g>
+    <g class="m-node shape outer cluster" id="m76a496__node__n5" data-role="step">
+      <rect x="15" y="631" width="348.5" height="132" class="m-shape outer-box"/>
+      <text x="185" y="675" class="m-label t-heading header-text" text-anchor="middle">4A. SCRIPT TOGGLE (script_toggle.py)</text>
+      <text x="185" y="697" class="m-label t-heading header-text" text-anchor="middle">• Devanagari: कल मीटिंग के बाद...</text>
+      <text x="185" y="719" class="m-label t-heading header-text" text-anchor="middle">• Roman: kal meeting ke baad...</text>
+    </g>
+    <g class="m-node shape outer cluster" id="m76a496__node__n6" data-role="step">
+      <rect x="389" y="631" width="297.5" height="132" class="m-shape outer-box"/>
+      <text x="533.5" y="675" class="m-label t-heading header-text" text-anchor="middle">4B. EDGE EXPORT (export_ggml)</text>
+      <text x="533.5" y="697" class="m-label t-heading header-text" text-anchor="middle">• Merge LoRA + Q4_0 Quantize</text>
+      <text x="533.5" y="719" class="m-label t-heading header-text" text-anchor="middle">• ~75MB Offline Android Binary</text>
+    </g>
+    <g class="m-edge" id="m76a496__edge__n3__n4__0" data-role="connector">
+      <line x1="356.35" y1="422" x2="379.15" y2="422" class="m-path arrow-line" marker-start="url(#m76a496__mk-arrow)" marker-end="url(#m76a496__mk-arrow)"/>
+    </g>
+    <g class="m-edge" id="m76a496__edge__pt__pt__0" data-role="connector">
+      <line x1="189.25" y1="554" x2="512.25" y2="554" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="m76a496__edge__pt__n5__0" data-role="connector">
+      <line x1="189.25" y1="554" x2="189.25" y2="629.65" class="m-path arrow-line" marker-end="url(#m76a496__mk-arrow)"/>
+    </g>
+    <g class="m-edge" id="m76a496__edge__n0__n1__0" data-role="connector">
+      <line x1="350.75" y1="125" x2="350.75" y2="167.65" class="m-path arrow-line" marker-end="url(#m76a496__mk-arrow)"/>
+    </g>
+    <g class="m-edge" id="m76a496__edge__n1__n3__0" data-role="connector">
+      <line x1="350.75" y1="279" x2="350.75" y2="321.65" class="m-path arrow-line" marker-end="url(#m76a496__mk-arrow)"/>
+    </g>
+    <g class="m-edge" id="m76a496__edge__n3__pt__0" data-role="connector">
+      <line x1="350.75" y1="521" x2="350.75" y2="554" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="m76a496__edge__pt__n6__0" data-role="connector">
+      <line x1="512.25" y1="554" x2="512.25" y2="629.65" class="m-path arrow-line" marker-end="url(#m76a496__mk-arrow)"/>
+    </g>
+  </g>
+</svg>
