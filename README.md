@@ -1,29 +1,3 @@
----
-language:
-- hi
-- en
-license: mit
-library_name: peft
-base_model: ai4bharat/indicwhisper-hi
-tags:
-- automatic-speech-recognition
-- whisper
-- lora
-- peft
-- hindi
-- hinglish
-- indian-english
-- speech
-- audio
-datasets:
-- ai4bharat/IndicVoices
-- mozilla-foundation/common_voice_17_0
-metrics:
-- wer
-- cer
-pipeline_tag: automatic-speech-recognition
----
-
 <div align="center">
 
 <!-- Laila Logo URL top view (Upar wala logo) -->
