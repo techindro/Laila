@@ -266,6 +266,17 @@ Laila plans to support all 22 scheduled languages of India:
 
 ---
 
+## 📚 Citation
+
+```bibtex
+@article{patel2026laila,
+  title={Laila: Parameter-Efficient Adaptation of Whisper-Small for Indian-Accented and Code-Switched Hindi-English Speech},
+  author={Patel, Shubham},
+  year={2026},
+  url={https://huggingface.co}
+}
+```
+
 ## 📜 License
 
 MIT — Free to use, modify, and distribute.
