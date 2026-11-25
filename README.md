@@ -23,7 +23,10 @@
 
 ## 🌐 Platform Overview
 
-![Laila — ASR for Indian Languages](https://raw.githubusercontent.com/techindro/Laila/main/assets/hero.png)
+ <video width="100%" controls>
+    <source src="brag.mp4" type="video/mp4">
+    Laila Models Live 
+  </video>
 
 > *"Whisper, but for India — parameter-efficient ASR for Indian-accented and code-switched speech"*
 
